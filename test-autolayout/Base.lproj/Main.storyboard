@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="test_autolayout" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" misplaced="YES" placeholderIntrinsicWidth="600" placeholderIntrinsicHeight="128" translatesAutoresizingMaskIntoConstraints="NO" id="xby-V7-N8E" customClass="ToolView" customModule="test_autolayout" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="472" width="600" height="128"/>
+                                <color key="backgroundColor" red="0.80000001190000003" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="P1E-AE-xfc"/>
+                                    <constraint firstAttribute="width" constant="128" id="nEW-Rv-yLz"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="P1E-AE-xfc"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap me" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xii-vH-oVv">
+                                <rect key="frame" x="272" y="289" width="56" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="xby-V7-N8E" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="0Ba-oL-Ymj"/>
+                            <constraint firstAttribute="centerX" secondItem="Xii-vH-oVv" secondAttribute="centerX" id="S9Q-nx-NyC"/>
+                            <constraint firstItem="xby-V7-N8E" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="UqP-Dr-3wU"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="xby-V7-N8E" secondAttribute="bottom" id="fGe-9d-ysa"/>
+                            <constraint firstItem="xby-V7-N8E" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="gwt-8V-cQN"/>
+                            <constraint firstAttribute="centerY" secondItem="Xii-vH-oVv" secondAttribute="centerY" id="lWt-Bw-ySH"/>
+                            <constraint firstItem="xby-V7-N8E" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="maG-GJ-kMD"/>
+                            <constraint firstAttribute="trailing" secondItem="xby-V7-N8E" secondAttribute="trailing" id="qDA-Bx-k4V"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="0Ba-oL-Ymj"/>
+                                <exclude reference="gwt-8V-cQN"/>
+                                <exclude reference="qDA-Bx-k4V"/>
+                            </mask>
+                        </variation>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Wja-bg-Kh6" appends="YES" id="4TI-RP-6OZ"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="a_bottom" destination="0Ba-oL-Ymj" id="sbW-vf-Dda"/>
+                        <outlet property="a_height" destination="P1E-AE-xfc" id="usw-mU-3ZQ"/>
+                        <outlet property="a_left" destination="gwt-8V-cQN" id="rfB-sX-h8Q"/>
+                        <outlet property="a_right" destination="qDA-Bx-k4V" id="CKK-hQ-MfT"/>
+                        <outlet property="b_bottom" destination="fGe-9d-ysa" id="NsY-OI-Vfg"/>
+                        <outlet property="b_left" destination="maG-GJ-kMD" id="wnU-yx-Se0"/>
+                        <outlet property="b_top" destination="UqP-Dr-3wU" id="RX4-UC-i1F"/>
+                        <outlet property="b_width" destination="nEW-Rv-yLz" id="emX-7x-5ub"/>
+                        <outlet property="toolView" destination="xby-V7-N8E" id="SqM-Jp-LIB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Wja-bg-Kh6">
+                    <connections>
+                        <action selector="tap:" destination="BYZ-38-t0r" id="0It-9y-Fpn"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+        </scene>
+    </scenes>
+</document>
